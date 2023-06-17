@@ -12,16 +12,25 @@
     
 }
 body{
-    background-color: rgb(127, 255, 8);
+    background-color: rgb(53, 54, 51);
 }
 .parent{
-    background-color: rgb(127, 255, 8);
-
+    background-color: rgb(53, 54, 51);
     padding: 60px;
     height: 100%;
 }
+
 .parentMain{
-    
+    display: block;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.parentMain2{
+    /* display: none; */
 }
 header{
     display: flex;
@@ -166,7 +175,7 @@ h1{
     color: cadetblue;
     font-size: 24px;
     padding: 4px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 .subTaskTitle{
     color: cadetblue;
@@ -184,8 +193,12 @@ h1{
 .marked{
 text-decoration: line-through;
 }
-
-
+.parentDetails{
+    display: none;
+}
+.heading2{
+    font-size: 36px;
+}
 
 
 
@@ -199,7 +212,7 @@ text-decoration: line-through;
 
 
   /* mobileView start  */
-@media (min-width:200px) and (max-width:680px){
+@media (min-width:200px) and (max-width:750px){
     .parent{
         background-color: rgb(127, 255, 8);
     /* justify-content: center; */
