@@ -22,6 +22,7 @@ let headingAddNewTaskPop = document.getElementsByClassName(
 let newTaskParent = document.getElementsByClassName("cardContainer");
 let noItemInToDoList = document.getElementsByClassName("noItemInToDoList");
 let subTaskRuning = false;
+let cardSpecification = document.getElementsByClassName("cardSpecification");
 
 // code start
 
@@ -33,6 +34,7 @@ addTaskFromDetailsButton[0].addEventListener("click", () => {
 });
 todoDetailsPageBack[0].addEventListener("click", () => {
   closeTODOTaskPage();
+  // cardSpecification[0].remove(taskContainer1);
 });
 
 taskClose.addEventListener("click", () => {
@@ -42,13 +44,46 @@ addTaskButton.addEventListener("click", () => {
   addNewTask();
   closeTaskPopUp();
 });
-function openTODOTaskPage() {
+function openTODOTaskPage(
+  taskContainer1,
+  headingS,
+  taskContainer,
+  subTaskContainer,
+  removeTaskContainer,
+  removeTaskImage,
+  addSubTaskImage
+) {
   parentMain[0].classList.add("hide");
   parentMain2[0].classList.remove("hide");
   parentMain2[0].classList.remove("parentBlur");
   console.log("openDetailsPage");
   parentMain[0].setAttribute("style", " display: none");
   parentMain2[0].setAttribute("style", " display: block");
+
+  cardSpecification[0].appendChild(taskContainer1);
+  console.log(taskContainer1);
+  let specialHeading = document.getElementsByClassName("heading2");
+  specialHeading[0].innerHTML = headingS.innerHTML;
+
+  // cheking
+
+  // taskContainer.classList.add("taskContainer");
+  // taskContainer.classList.add(`id${taskCount}`);
+  // taskContainer.id = `id${taskCount}`;
+  // // var uniqeId = document.getElementsByClassName(`uniqeId${taskCount}`);
+  // var uniqeId = document.getElementById(`id${taskCount}`);
+  // headingS.classList.add("taskHeading");
+  // subTaskContainer.classList.add("subTaskContainer");
+  // subTaskContainer.classList.add(`uniqeId${taskCount}`);
+  // subTaskContainer.id = `uniqeId${taskCount}`;
+  // removeTaskContainer.classList.add("removeTaskContainer");
+  // removeTaskImage.classList.add("removeTaskImage");
+  // addSubTaskImage.classList.add("addSubTaskImage");
+
+  // // subTaskContainer.classList.add("subTaskContainer");
+  // headingS.innerHTML = addTaskInput.value;
+  // removeTaskImage.src = "./trash.png";
+  // addSubTaskImage.src = "./edit.png";
 }
 function addTaskFromDetails() {
   openTaskPopUp();
@@ -64,6 +99,7 @@ function closeTODOTaskPage() {
   parentMain2[0].classList.add("hide");
 
   parentMain[0].setAttribute("style", " display: block");
+  parentMain2[0].setAttribute("style", " display: none");
 }
 // function closeTODOTaskPage() {
 //   parentMain2[0].classList.add("parentBlur");
@@ -151,6 +187,7 @@ function addNewTask() {
   removeTaskContainer.appendChild(addSubTaskImage);
 
   // styleing element
+
   taskContainer.classList.add("taskContainer");
   taskContainer.classList.add(`id${taskCount}`);
   taskContainer.id = `id${taskCount}`;
@@ -172,11 +209,17 @@ function addNewTask() {
   closeTaskPopUp();
 
   // task Datails
-  function openDetails() {
-    openTODOTaskPage();
-  }
+
   taskHeading.addEventListener("click", () => {
-    openDetails();
+    openTODOTaskPage(
+      taskContainer,
+      taskHeading,
+      taskContainer,
+      subTaskContainer,
+      removeTaskContainer,
+      removeTaskImage,
+      addSubTaskImage
+    );
   });
 
   // removeTodoTask
