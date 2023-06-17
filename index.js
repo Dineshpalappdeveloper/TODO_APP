@@ -1,6 +1,7 @@
 let addNewTaskPopButton = document.getElementsByClassName("rightHeader");
 let parentMain = document.getElementsByClassName("parentMain");
 let parentMain2 = document.getElementsByClassName("parentMain2");
+let addTaskFromDetailsButton = document.getElementsByClassName("addSymbol2");
 let todoDetailsPageBack = document.getElementsByClassName(
   "todoDetailsPageBack"
 );
@@ -27,14 +28,13 @@ let subTaskRuning = false;
 addNewTaskPopButton[0].addEventListener("click", () => {
   openTaskPopUp();
 });
+addTaskFromDetailsButton[0].addEventListener("click", () => {
+  addTaskFromDetails();
+});
 todoDetailsPageBack[0].addEventListener("click", () => {
-  todoDetailsPageBack();
+  closeTODOTaskPage();
 });
 
-// for
-// addNewTaskPopButton[1].addEventListener("click", () => {
-//   openTaskPopUp();
-// });
 taskClose.addEventListener("click", () => {
   closeTaskPopUp();
 });
@@ -45,37 +45,46 @@ addTaskButton.addEventListener("click", () => {
 function openTODOTaskPage() {
   parentMain[0].classList.add("hide");
   parentMain2[0].classList.remove("hide");
+  parentMain2[0].classList.remove("parentBlur");
   console.log("openDetailsPage");
   parentMain[0].setAttribute("style", " display: none");
+  parentMain2[0].setAttribute("style", " display: block");
 }
+function addTaskFromDetails() {
+  openTaskPopUp();
 
-function todoDetailsPageBack() {
+  parentMain2[0].classList.add("parentBlur");
+  parentMain2[0].setAttribute("style", " display: block");
+  parentMain2[0].classList.remove("hide");
+  // closeTODOTaskPage();
+}
+function closeTODOTaskPage() {
   console.log("MainPage Opened");
   parentMain[0].classList.remove("hide");
   parentMain2[0].classList.add("hide");
 
   parentMain[0].setAttribute("style", " display: block");
 }
-function closeTODOTaskPage() {
-  parentMain2[0].classList.add("parentBlur");
-  // parentMain2[0].setAttribute("style", " display: none");
-  taskPopUp[0].setAttribute("style", " display: block");
-  parent[0].setAttribute("style", "background-color: rgb(53, 54, 51)");
-  body[0].setAttribute("style", "background-color: rgb(53, 54, 51)");
-  console.log("open");
-  // closeTODOTaskPage();
+// function closeTODOTaskPage() {
+//   parentMain2[0].classList.add("parentBlur");
+//   // parentMain2[0].setAttribute("style", " display: none");
+//   taskPopUp[0].setAttribute("style", " display: block");
+//   parent[0].setAttribute("style", "background-color: rgb(53, 54, 51)");
+//   body[0].setAttribute("style", "background-color: rgb(53, 54, 51)");
+//   console.log("open");
+//   // closeTODOTaskPage();
 
-  // parentMain[0].setAttribute("style", " display: block");
-  // parentMain2[0].setAttribute("style", " display: none");
-  // parentMain[0].classList.remove("parentBlur");
-  // header[0].setAttribute("style", " display: flex");
-  // taskPopUp[0].setAttribute("style", " display: none");
-  // taskPopUp2[0].setAttribute("style", " display: none");
-  // parent[0].setAttribute("style", "background-color: rgb(127, 255, 8)");
-  // body[0].setAttribute("style", "background-color: rgb(127, 255, 8)");
-  console.log("closeTODO Page");
-  // addTaskInput.innerHTML = "";
-}
+//   // parentMain[0].setAttribute("style", " display: block");
+//   // parentMain2[0].setAttribute("style", " display: none");
+//   // parentMain[0].classList.remove("parentBlur");
+//   // header[0].setAttribute("style", " display: flex");
+//   // taskPopUp[0].setAttribute("style", " display: none");
+//   // taskPopUp2[0].setAttribute("style", " display: none");
+//   // parent[0].setAttribute("style", "background-color: rgb(127, 255, 8)");
+//   // body[0].setAttribute("style", "background-color: rgb(127, 255, 8)");
+//   console.log("closeTODO Page");
+//   // addTaskInput.innerHTML = "";
+// }
 function openTaskPopUp() {
   parentMain[0].classList.add("parentBlur");
   taskPopUp[0].setAttribute("style", " display: block");
@@ -165,11 +174,6 @@ function addNewTask() {
   // task Datails
   function openDetails() {
     openTODOTaskPage();
-    // parentMain[0].classList.add("parentBlur");
-    // taskPopUp[0].setAttribute("style", " display: block");
-    // parent[0].setAttribute("style", "background-color: aqua");
-    // body[0].setAttribute("style", "background-color: aqua");
-    // console.log("open");
   }
   taskHeading.addEventListener("click", () => {
     openDetails();
@@ -194,49 +198,6 @@ function addNewTask() {
   addSubTaskButton.addEventListener("click", () => {
     AddTodoSubTask(subTaskContainer);
   });
-
-  // function AddTodoSubTask() {
-  //   closeSubTaskPopUp();
-
-  //   console.log("subTask Created");
-  //   // createing element
-  //   var subtaskParent = document.createElement("div");
-  //   var subTaskTitle = document.createElement("h2");
-  //   var subTaskMarker = document.createElement("button");
-  //   var breacktag = document.createElement("br");
-  //   var breacktag2 = document.createElement("br");
-  //   // added to parent
-
-  //   subTaskContainer.appendChild(subtaskParent);
-
-  //   // uniqeId.appendChild(subtaskParent);
-  //   subtaskParent.appendChild(subTaskTitle);
-  //   subtaskParent.appendChild(subTaskMarker);
-  //   subTaskContainer.appendChild(breacktag);
-  //   subTaskContainer.appendChild(breacktag2);
-  //   // styling element
-  //   subtaskParent.classList.add("subtaskParent");
-  //   subTaskTitle.classList.add("subTaskTitle");
-  //   subTaskMarker.classList.add("subTaskMarker");
-  //   subTaskTitle.innerHTML = addSubTaskInput.value;
-  //   subTaskMarker.innerHTML = "Done";
-
-  //   // marker codeing
-  //   let marker = false;
-  //   subTaskMarker.addEventListener("click", () => {
-  //     if (marker) {
-  //       subTaskTitle.classList.remove("marked");
-  //       console.log("unmarked");
-  //       marker = false;
-  //       subTaskMarker.innerHTML = "Done";
-  //     } else {
-  //       subTaskTitle.classList.add("marked");
-  //       console.log("marked");
-  //       marker = true;
-  //       subTaskMarker.innerHTML = "UnDone";
-  //     }
-  //   });
-  // }
 }
 // testing
 function AddTodoSubTask(subTaskContainer) {

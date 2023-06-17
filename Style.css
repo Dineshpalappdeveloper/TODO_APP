@@ -197,10 +197,11 @@ text-decoration: line-through;
     display: none;
 }
 .heading2{
-    font-size: 36px;
+    font-size: 66px;
 }
-
-
+.todoDetailsPageBack{
+    padding-top: 10px;
+}
 
 
 
