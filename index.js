@@ -1,9 +1,3 @@
-idCount = 0;
-count = 0;
-let todoCardId = 0;
-let child;
-let headChild;
-let childMainDiv;
 let head1 = document.getElementsByClassName("head1");
 let popup = document.getElementsByClassName("addTask");
 let popup2 = document.getElementsByClassName("addItem");
@@ -13,18 +7,23 @@ let todo = document.getElementsByClassName("todos");
 let todo2 = document.getElementsByClassName("todo2");
 
 function addPopup() {
-  head1.style.filter = "blur(20px)";
-  head2.style.filter = "blur(20px)";
+  head1[0].style.filter = "blur(20px)";
+  head2[0].style.filter = "blur(20px)";
 
-  popup.style.display = "block";
+  popup[0].style.display = "block";
 }
 
 function closeTask() {
-  popup.style.display = "none";
-  head1.style.filter = "blur(0px)";
-  head2.style.filter = "blur(0px)";
+  popup[0].style.display = "none";
+  head1[0].style.filter = "blur(0px)";
+  head2[0].style.filter = "blur(0px)";
 }
-
+idCount = 0;
+count = 0;
+let todoCardId = 0;
+let child;
+let headChild;
+let childMainDiv;
 function addTask() {
   idCount++;
   count++;
@@ -53,7 +52,7 @@ function createCard(id, cardTittle, count) {
 
   let mainDiv = document.createElement("div");
   mainDiv.setAttribute("id", `mainDiv${id}`);
-  todo.appendChild(todoDiv);
+  todo[0].appendChild(todoDiv);
   todoDiv.appendChild(heading);
   todoDiv.append(button1);
   todoDiv.append(button2);
@@ -69,13 +68,13 @@ function createCard(id, cardTittle, count) {
   heading.classList.add("line");
 
   heading.addEventListener("click", () => {
-    head1.style.display = "none";
-    head2.style.display = "block";
-    head2Text.innerHTML = `${cardTittle}`;
+    head1[0].style.display = "none";
+    head2[0].style.display = "block";
+    head2Text[0].innerHTML = `${cardTittle}`;
     todoCardId = todoDiv.getAttribute("id");
     headChild = document.getElementById(`${todoCardId}`);
     console.log(headChild);
-    todo2.appendChild(headChild);
+    todo2[0].appendChild(headChild);
   });
 
   button1.addEventListener("click", () => {
@@ -88,9 +87,9 @@ function createCard(id, cardTittle, count) {
   });
 
   button2.addEventListener("click", () => {
-    head1.style.filter = "blur(20px)";
-    head2.style.filter = "blur(20px)";
-    popup2.style.display = "block";
+    head1[0].style.filter = "blur(20px)";
+    head2[0].style.filter = "blur(20px)";
+    popup2[0].style.display = "block";
 
     todoCardId = todoDiv.getAttribute("id");
     child = document.getElementById(`${todoCardId}`).children;
@@ -99,19 +98,15 @@ function createCard(id, cardTittle, count) {
 }
 
 function closeItem() {
-  head1.style.filter = "blur(0px)";
-  head2.style.filter = "blur(0px)";
-  popup2.style.display = "none";
+  head1[0].style.filter = "blur(0px)";
+  head2[0].style.filter = "blur(0px)";
+  popup2[0].style.display = "none";
 }
 
 function addItem() {
-  popup2.style.display = "none";
-  head1.style.filter = "blur(0px)";
-  head2.style.filter = "blur(0px)";
-
-  //  child = document.getElementById(`${todoCardId}`).children;
-
-  // let divToAdd = document.getElementById(`${mainDivId}`)
+  popup2[0].style.display = "none";
+  head1[0].style.filter = "blur(0px)";
+  head2[0].style.filter = "blur(0px)";
 
   let itemDiv = document.createElement("div");
   let itemText = document.createElement("div");
@@ -146,7 +141,7 @@ function addItem() {
 }
 
 function back() {
-  head1.style.display = "block";
-  head2.style.display = "none";
-  todo.appendChild(headChild);
+  head1[0].style.display = "block";
+  head2[0].style.display = "none";
+  todo[0].appendChild(headChild);
 }
