@@ -18,76 +18,55 @@
     <link rel="stylesheet" href="./Style.css" />
   </head>
   <body>
-    <div class="parent">
-      <div class="parentMain">
-        <header>
-          <div class="leftHeader">
-            <h1>Task</h1>
-            <h1 class="heading">List</h1>
+    <div class="mainContainer">
+      <header class="head1">
+        <div class="display">
+          <h1>Task <span class="list">List</span></h1>
+          <div class="display addBtn">
+            <button class="btn1" onclick="addPopup()">+</button>
+            <h2 onclick="addPopup()"><span> Add Item</span></h2>
           </div>
-          <div class="rightHeader">
-            <h1 class="addSymbol">+</h1>
-            <h1 class="heading">Add Item</h1>
-          </div>
-        </header>
-        <div class="cardContainer">
-          <h1 class="noItemInToDoList">No items in the todo list</h1>
         </div>
-      </div>
-      <div class="parentMain2 hide">
-        <header>
-          <div class="leftHeader">
-            <h1><img src="./back (1).png" alt="back" class="backImg" /></h1>
-            <h2 class="heading todoDetailsPageBack">Back</h2>
+        <div class="checkItem">No Items in the todo List</div>
+        <div class="todos" id="todos"></div>
+      </header>
+
+      <header class="head2">
+        <div class="display">
+          <div class="display">
+            <button class="backBtn" onclick="back()">></button>
+            <h2 onclick="back()"><span>BACK</span></h2>
           </div>
-          <div class="middleHeader">
-            <h1 class="heading heading2">Rajgir glass bridge</h1>
-          </div>
-          <div class="rightHeader">
-            <h1 class="addSymbol addSymbol2">+</h1>
-          </div>
-        </header>
-        <div class="auto"><div class="cardSpecification"></div></div>
-      </div>
-    </div>
-    <div class="parentDetails">
-      <div class="parentMainDetails">
-        <header>
-          <div class="leftHeaderDetails">
-            <h1>Task</h1>
-            <h1 class="headingDetails">List</h1>
-          </div>
-          <div class="rightHeaderDetails">
-            <h1 class="addSymbolDetails">+</h1>
-            <h1 class="headingDetails">Add Item</h1>
-          </div>
-        </header>
-        <div class="cardContainerDetails"></div>
-      </div>
-    </div>
-    <div class="parentBack">
-      <div class="taskPopUp">
-        <h1 class="headingAddNewTaskPop">Add New Task</h1>
-        <div class="inputAddNewTask">
-          <input type="text" placeholder="Add New Task" id="taskInput" />
+          <div class="head2Text"></div>
+          <button class="btn1" onclick="addPopup()">+</button>
         </div>
-        <div class="addOrCloseButtonPop">
-          <button id="taskAdd">Add</button>
-          <button id="taskClose">Close</button>
+        <div class="todo2"></div>
+      </header>
+
+      <section>
+        <div class="addTask display">
+          <div class="adt">ADD NEW TASK</div>
+          <input class="cardText" type="text" placeholder="Add New Task" />
+          <div>
+            <button class="btn2 addBtn" onclick="addTask()">Add</button>
+            <button class="btn2 closeBtn" onclick="closeTask()">Close</button>
+          </div>
         </div>
-      </div>
-      <div class="taskPopUp2">
-        <h1 class="headingAddNewTaskPop2">Add New Item</h1>
-        <div class="inputAddNewTask2">
-          <input type="text" placeholder="Add New Item" id="taskInput2" />
+      </section>
+
+      <section>
+        <div class="display addItem">
+          <div class="adt">ADD NEW ITEM</div>
+          <input class="cardItem" type="text" placeholder="Add New Item" />
+          <div>
+            <button id="addBtn2" class="btn2 addBtn2" onclick="addItem()">
+              Add
+            </button>
+            <button class="btn2 closeBtn2" onclick="closeItem()">Close</button>
+          </div>
         </div>
-        <div class="addOrCloseButtonPop2">
-          <button id="taskAdd2">Add</button>
-          <button id="taskClose2">Close</button>
-        </div>
-      </div>
+      </section>
     </div>
     <script src="./index.js"></script>
-    <div></div>
   </body>
 </html>

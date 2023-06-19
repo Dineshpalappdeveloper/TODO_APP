@@ -1,310 +1,238 @@
 *{
-
-    /* font-family: 'Sacramento', cursive; */
-    /* font-family: 'Cookie', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'Great Vibes', cursive; */
     font-family: 'Cookie', cursive;
-        /* font-family: 'Sacramento', cursive; */
-    /* font-family: 'Playfair Display', serif; */
-    /* font-family: 'Roboto Slab', serif; */
-    color: white;
-    
+    /* font-size: 32px; */
 }
+
+.list{
+    color: red;
+}
+
 body{
     background-color: rgb(53, 54, 51);
 }
-.parent{
+.mainContainer{
     background-color: rgb(53, 54, 51);
-    padding: 60px;
-    height: 100%;
-}
+    color: white;
+    box-sizing: border-box;
+    
 
-.parentMain{
-    display: block;
-
-}
-.parentMain2{
-    display: flex;
-    text-align: center;
-    margin: auto;
-}
-.show{
-    display: block;
-}
-.hide{
-    display: none;
-}
-.parentMain2{
-    /* display: none; */
-}
-header{
-    display: flex;
-    justify-content: space-between;
-}
-.heading{
-    color: red;
-    margin-left: 4px;
-}
-.leftHeader,.rightHeader{
-    font-size: 30px;
-    display: flex;
-}
-
-.addSymbol{
-    border-radius: 50%;
-    background-color: white;
-    color: green;
-   padding-bottom: 14px;
-    height: 50px;
-  
-    width: 50px;
-    text-align: center;
-
-}
-.noItemInToDoList{
-
-    font-size: 39px;
-    color: red;
-
-}
-.parentBack{
-    /* margin: auto; */
-   
-    position: fixed;
-  left: 40%;
-   top: 30%;
-}
-
-.taskPopUp,.taskPopUp2{
-    height: 250px;
-    width: 450px;
-    background-color: white;
-    border-radius: 15px;
-    margin: auto;
-    position: fixed;
-    display: none;
-}
-.headingAddNewTaskPop,.headingAddNewTaskPop2{
-    color: red;
-   
-    padding-top: 50px;
-    text-align: center;
-}
-.inputAddNewTask,.inputAddNewTask2{
-    color: red;
-    text-align: center;
-}
-
-input{
-    text-align: center;
-    margin: auto;
-    border: 2px solid red;
-    border-radius: 5px;
-    height: 32px;
-    color: aqua;
-    width: 300px;
-    font-weight: 800;
-    font-size: 32px;
-}
-.addOrCloseButtonPop,.addOrCloseButtonPop2{
-    text-align: center;
-
-    margin: auto;
-  
-    border-radius: 5px;
-    height: 32px;
-    width: 300px;
-}
-
-button{
-  border: 2px solid red;
-  color: brown;
-  height: 32px;
-  padding: 2px;
-  margin: 15px;
-  font-size: 25px;
-  background-color: aqua;
-  border-radius: 5px;
-  width: 100px;
 }
 h1{
-    font-family: 'Cookie', cursive;
+    font-size: 50px;
+    
 }
-.cardContainer{
-    display: flex; 
-    justify-content: space-between;
-    flex-wrap: wrap;
+header{
+    padding: 40px;    
 }
-.taskContainer{
-    min-height: 400px;
-    width: 280px;
-    color: red;
-  
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid greenyellow;
-    margin: 20px 2px;
+.head2Text{
+    font-size: 40px;
 
 }
-.taskHeading{
-    text-align: center;
-    font-size: 24px;
-    padding: 3px;
-    color: red;
-    font-weight: 800;
-}
-.subTaskContainer{
-    min-height: 260px;
-}
-.removeTaskContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    height: 60px;
-    padding: 4px;
-}
-.removeTaskImage{
-   margin: 5px; 
-}
-.addSubTaskImage{
-    margin: 5px;
-}
-.parentBlur{
-    filter: blur(25px);
-}
-.subtaskParent{
-    display: flex;
-    height: 10px;
-    width: 260px;
-    text-align: center;
-    justify-content: space-between;
-    color: cadetblue;
-    font-size: 24px;
-    padding: 4px;
-    box-sizing: border-box;
-}
-.subTaskTitle{
-    color: cadetblue;
-    font-size: 32px;
-    margin-left: 20px;
-    margin-top: 0.1px;
-  
-
-}
-.subTaskMarker{
-    text-align: center;
-    padding-bottom: 10px;
-  
-}
-.marked{
-text-decoration: line-through;
-}
-.parentDetails{
+.head2{
     display: none;
+    margin-bottom: 100px;
 }
-.heading2{
-    font-size: 66px;
-}
-.todoDetailsPageBack{
-    padding-top: 10px;
-}
-
-.cardSpecification{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 250px;
-}
-.auto{
-    display: flex;
-    justify-content: center;
-    margin-left: -10%;
-   
-}
-
-
-
-
-
-
-
-  /* mobileView start  */
-@media (min-width:200px) and (max-width:750px){
-    .parent{
-        /* background-color: rgb(127, 255, 8); */
-    /* justify-content: center; */
-        padding: 4%;
-        height: 100%;
-    }
-    .cardContainer{
-        display: flex; 
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .leftHeader,.rightHeader{
-        font-size: 16px;
-        display: flex;
-        
-    }
-    header{
+.display{
     display: flex;
     justify-content: space-around;
 }
-    .noItemInToDoList{
+.addBtn{
+    padding: 25px;
+}
+.btn1{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #11009E;
+    background-color: #209e00;
+    border-radius: 15px;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
 
-        font-size: 16px;
-        color: red;
-    
-    }
-  
-.addSymbol{
-    border-radius: 50%;
+.backBtn{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
     background-color: white;
-    color: green;
-   padding-bottom: 14px;
-    height: 19px;
-  
-    width: 15px;
-    text-align: center;
-
-}
-.heading{
-    color: red;
-    margin-left: 1px;
-}
-.parentBack{
-   
-    position: fixed;
-  left: 5%;
-   top: 20%;
+    border-radius: 50%;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
-.taskPopUp,.taskPopUp2{
-    height: 250px;
-    width: 90%;
+.checkItem{
+    font-size: 25px;
+    font-weight: bolder;
+    position: relative;
+    left: 320px;
+    margin-top: 40px;
+}
+.adt{
+    color: orangered;
+    font-size: x-large;
+    padding-bottom: 10px;
+    font-weight: bolder;
 }
 input{
+    width: 300px;
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid orangered;
+    border-radius:4px ;
+    box-shadow: 1px 1px 4px 2px gray;
+}
+.addTask{
+    display: none;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid orangered;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    text-align: center;
+    position: fixed;
+    top: 30vh;
+    left: 40vw;
+    z-index: 1;
+}
+.addItem{
+    display: none;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid orangered;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    text-align: center;
+    position: fixed;
+    top: 30vh;
+    left: 40vw;
+    z-index: 1;
+}
+.btn2{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: orangered;
+    color: white;
+    font-size: large;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    padding: 10px ;
+    box-sizing: border-box;
+}
+.blur{
+    filter: blur(20px);
+}
+.todos{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 280px;
+    top:60px;
+    background-color: rgb(53, 54, 51);
+}
+.todo2{
+    width: 400px;
+    position: relative;
+    left: 640px;
+    top:150px;
+}
+.todoscard{
+    width: 220px;
+    height: 350px;
+    background-color: #FFF4F4;
+    color: #EA906C;
+    font-size: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    border:1px solid orangered;
+    border-radius: 10px;
+    margin-bottom: 30px;
     
-    height: 28px;
-    color: aqua;
-    width: 80%;
-    font-weight: 800;
-    font-size: 26px;
-    margin-bottom: 20px;
 }
-.addOrCloseButtonPop,.addOrCloseButtonPop2{
-   
-    height: 32px;
-    width: 260px;
+.addCardBtn1{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #EA906C;
+    background-color: #EA906C;
+    color: white;
+    font-size: 28px;
+    font-weight: bolder;
+    position: relative;
+    top: 210px;
+    left: 55px;
+    z-index: 1;
+}
+.line{
+    border-bottom: 2px solid grey;
+    padding-bottom: 20px;
+    margin: 20px 0px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.addCardBtn2{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid #068DA9;
+    background-color: #068DA9;
+    color: white;
+    font-size: 28px;
+    font-weight: bolder;
+    position: relative;
+    top: 210px;
+    left: 60px;
+    z-index: 1;
+    
 }
 
-button{
-
-  height: 32px;
-  padding: 2px;
-  margin: 5px;
-  font-size: 25px;
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    height: 200px;
+    overflow-y: auto ;
+    overflow-x: hidden;
+    
+    
+}
+.itemDiv{
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+   margin-left: 20px;
+   margin-bottom: 10px;
+    
+}
+.itemText{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    width: 70px;
+    margin-right: 2px;
+    margin-top: 4px;
+    text-align: left;
 
 }
+.itemButton{
+    background-color: #11009E;
+    border: 2px solid white;
+    color: #FFF4F4;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+   margin-left: 20px;
 }
