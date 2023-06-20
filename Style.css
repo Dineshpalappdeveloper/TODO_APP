@@ -9,7 +9,11 @@
 .list{
     color: red;
 }
-
+.imgBack{
+    height: 30px;
+    width: 30px;
+    margin-top: -1px;
+}
 body{
     background-color: rgb(53, 54, 51);
 }
@@ -20,6 +24,7 @@ body{
     
 
 }
+
 h1{
     font-size: 50px;
     
@@ -233,7 +238,7 @@ input{
 
 }
 .itemButton{
-    background-color: #11009E;
+    background-color:aqua;
     border: 2px solid white;
     color: #FFF4F4;
     border-radius: 20px;

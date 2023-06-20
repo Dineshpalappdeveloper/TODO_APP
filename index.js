@@ -37,7 +37,7 @@ function addTask() {
   if (cardTittle) {
     createCard(idCount, cardTittle, count);
   } else {
-    alert("Please Give Name to the Todo card");
+    alert("Please Give  the name");
   }
   closeTask();
   back();
@@ -47,8 +47,8 @@ function createCard(id, cardTittle, count) {
   let todoDiv = document.createElement("div");
   todoDiv.setAttribute("id", `${id}`);
   let heading = document.createElement("p");
-  let button1 = document.createElement("button");
-  let button2 = document.createElement("button");
+  let button1 = document.createElement("img");
+  let button2 = document.createElement("img");
 
   let mainDiv = document.createElement("div");
   mainDiv.setAttribute("id", `mainDiv${id}`);
@@ -59,8 +59,10 @@ function createCard(id, cardTittle, count) {
   todoDiv.appendChild(mainDiv);
 
   heading.innerHTML = `${cardTittle}`;
-  button1.innerHTML = "x";
-  button2.innerHTML = "+";
+  // button1.innerHTML = "x";
+  // button2.innerHTML = "+";
+  button2.src = "./edit.png";
+  button1.src = "./trash.png";
   mainDiv.classList.add("mainDiv");
   todoDiv.classList.add("todoscard");
   button1.classList.add("addCardBtn1");
