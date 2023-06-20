@@ -23,8 +23,8 @@
         <div class="display">
           <h1>Task <span class="list">List</span></h1>
           <div class="display addBtn">
-            <button class="btn1" onclick="addPopup()">+</button>
-            <h2 onclick="addPopup()"><span> Add Item</span></h2>
+            <button class="btn1 addTaskPopUp">+</button>
+            <h2 class="addTaskPopUp2"><span> Add Item</span></h2>
           </div>
         </div>
         <div class="checkItem">No Items in the todo List</div>
@@ -34,15 +34,15 @@
       <header class="head2">
         <div class="display">
           <div class="display">
-            <button class="backBtn" onclick="back()">
+            <button class="backBtn">
               <img class="imgBack" src="./back (1).png" alt="" />
             </button>
-            <h2 onclick="back()">
+            <h2 class="backBtn2">
               <span>BACK</span>
             </h2>
           </div>
           <div class="head2Text"></div>
-          <button class="btn1" onclick="addPopup()">+</button>
+          <button class="btn1 addTaskPopUpSecondPage">+</button>
         </div>
         <div class="todo2"></div>
       </header>
@@ -52,8 +52,10 @@
           <div class="adt">ADD NEW TASK</div>
           <input class="cardText" type="text" placeholder="Add New Task" />
           <div>
-            <button class="btn2 addBtn" onclick="addTask()">Add</button>
-            <button class="btn2 closeBtn" onclick="closeTask()">Close</button>
+            <button class="btn2 addBtn addTaskButton">Add</button>
+            <button class="btn2 closeBtn closeTaskButton" onclick="">
+              Close
+            </button>
           </div>
         </div>
       </section>
@@ -63,10 +65,8 @@
           <div class="adt">ADD NEW ITEM</div>
           <input class="cardItem" type="text" placeholder="Add New Item" />
           <div>
-            <button id="addBtn2" class="btn2 addBtn2" onclick="addItem()">
-              Add
-            </button>
-            <button class="btn2 closeBtn2" onclick="closeItem()">Close</button>
+            <button id="addBtn2" class="btn2 addBtn2 addItemButton">Add</button>
+            <button class="btn2 closeBtn2 closeItemButton">Close</button>
           </div>
         </div>
       </section>

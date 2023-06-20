@@ -1,6 +1,7 @@
 *{
     font-family: 'Cookie', cursive;
     /* font-size: 32px; */
+    font-size: x-large;
 }
 .checkItem{
     font-size: 52px;
@@ -8,6 +9,9 @@
 }
 .list{
     color: red;
+}
+span{
+    font-size: 40px;
 }
 .imgBack{
     height: 30px;
@@ -130,7 +134,7 @@ input{
     width: 100px;
     height: 40px;
     margin-left: 10px;
-    background-color: orangered;
+    background-color: aqua;
     color: white;
     font-size: large;
     border: 2px solid orangered;
@@ -175,7 +179,7 @@ input{
     width: 35px;
     border-radius: 50%;
     border: 1px solid #EA906C;
-    background-color: #EA906C;
+    background-color: aqua;
     color: white;
     font-size: 28px;
     font-weight: bolder;
@@ -229,7 +233,7 @@ input{
 }
 .itemText{
     color: black;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     width: 70px;
     margin-right: 2px;

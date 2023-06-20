@@ -1,11 +1,51 @@
+// global scope
+let addTaskPopUp = document.querySelector(".addTaskPopUp");
+let addTaskPopUp2 = document.querySelector(".addTaskPopUp2");
+let backButton = document.querySelector(".backBtn");
+let backButton2 = document.querySelector(".backBtn2");
+let addTaskPopUpSecondPage = document.querySelector(".addTaskPopUpSecondPage");
+let addTaskButton = document.querySelector(".addTaskButton");
+let closeTaskButton = document.querySelector(".closeTaskButton");
 let head1 = document.getElementsByClassName("head1");
 let popup = document.getElementsByClassName("addTask");
 let popup2 = document.getElementsByClassName("addItem");
+let addItemButton = document.querySelector(".addItemButton");
 let head2 = document.getElementsByClassName("head2");
 let head2Text = document.getElementsByClassName("head2Text");
 let todo = document.getElementsByClassName("todos");
 let todo2 = document.getElementsByClassName("todo2");
+let closeItemButton = document.querySelector(".closeItemButton");
 
+// codeing start with addEventListener
+addTaskPopUp.addEventListener("click", () => {
+  addPopup();
+});
+addTaskPopUp2.addEventListener("click", () => {
+  addPopup();
+});
+backButton.addEventListener("click", () => {
+  back();
+});
+backButton2.addEventListener("click", () => {
+  back();
+});
+addTaskPopUpSecondPage.addEventListener("click", () => {
+  addPopup();
+});
+addTaskButton.addEventListener("click", () => {
+  addTask();
+});
+closeTaskButton.addEventListener("click", () => {
+  closeTask();
+});
+addItemButton.addEventListener("click", () => {
+  addItem();
+});
+addTaskButton.addEventListener("click", () => {
+  closeItem();
+});
+
+// function start
 function addPopup() {
   head1[0].style.filter = "blur(20px)";
   head2[0].style.filter = "blur(20px)";
@@ -24,6 +64,8 @@ let todoCardId = 0;
 let child;
 let headChild;
 let childMainDiv;
+
+// adding a new task
 function addTask() {
   idCount++;
   count++;
@@ -59,8 +101,7 @@ function createCard(id, cardTittle, count) {
   todoDiv.appendChild(mainDiv);
 
   heading.innerHTML = `${cardTittle}`;
-  // button1.innerHTML = "x";
-  // button2.innerHTML = "+";
+
   button2.src = "./edit.png";
   button1.src = "./trash.png";
   mainDiv.classList.add("mainDiv");
