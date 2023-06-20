@@ -256,6 +256,8 @@ input{
 
 
  /* responsive */
+
+ 
 @media (max-width:600px) and (min-width:280px) {
  .mainContainer{
     display: flex;
@@ -265,9 +267,7 @@ input{
  }
  .head2{
     width: 150%;
-    /* position: relative;
-    left: 40%;
-    top: auto; */
+  
  }
 .addTask,.addItem{
     position: absolute;

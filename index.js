@@ -47,19 +47,21 @@ closeItemButton.addEventListener("click", () => {
 
 // function start
 function addPopup() {
-  head1[0].style.filter = "blur(20px)";
-  head2[0].style.filter = "blur(20px)";
+  // head1[0].style.filter = "blur(20px)";
+  // head2[0].style.filter = "blur(20px)";
+  head1[0].classList.add("blur1");
+  head2[0].classList.add("blur1");
 
   popup[0].style.display = "block";
 }
 
 function closeTask() {
   popup[0].style.display = "none";
-  head1[0].style.filter = "blur(0px)";
-  head2[0].style.filter = "blur(0px)";
+  head1[0].classList.remove("blur1");
+  head2[0].classList.remove("blur1");
 }
-idCount = 0;
-count = 0;
+var idCount = 0;
+var count = 0;
 let todoCardId = 0;
 let child;
 let headChild;
@@ -79,7 +81,8 @@ function addTask() {
   if (cardTittle) {
     createCard(idCount, cardTittle, count);
   } else {
-    alert("Please Give  the name");
+    cardTittle = "No Name";
+    createCard(idCount, cardTittle, count);
   }
   closeTask();
   back();
@@ -118,6 +121,7 @@ function createCard(id, cardTittle, count) {
     headChild = document.getElementById(`${todoCardId}`);
     console.log(headChild);
     todo2[0].appendChild(headChild);
+    // here headChaild is a taskParentDiv
   });
 
   button1.addEventListener("click", () => {
@@ -130,26 +134,30 @@ function createCard(id, cardTittle, count) {
   });
 
   button2.addEventListener("click", () => {
-    head1[0].style.filter = "blur(20px)";
-    head2[0].style.filter = "blur(20px)";
+    head1[0].classList.add("blur1");
+    head2[0].classList.add("blur1");
     popup2[0].style.display = "block";
 
+    // this line is use to finding the main parent of the box
+    // jisme sub kuch rakha hai
     todoCardId = todoDiv.getAttribute("id");
+    // this line is use to targeting the subtaskContainner
     child = document.getElementById(`${todoCardId}`).children;
     childMainDiv = child[3];
+    // here childMainDiv is subtaskContainner
   });
 }
 
 function closeItem() {
-  head1[0].style.filter = "blur(0px)";
-  head2[0].style.filter = "blur(0px)";
+  head1[0].classList.remove("blur1");
+  head2[0].classList.remove("blur1");
   popup2[0].style.display = "none";
 }
 
 function addItem() {
   popup2[0].style.display = "none";
-  head1[0].style.filter = "blur(0px)";
-  head2[0].style.filter = "blur(0px)";
+  head1[0].classList.remove("blur1");
+  head2[0].classList.remove("blur1");
 
   let itemDiv = document.createElement("div");
   let itemText = document.createElement("div");
@@ -165,6 +173,15 @@ function addItem() {
   itemButton.classList.add("itemButton");
 
   let itemInput = document.querySelector(".cardItem").value;
+  // subtask Heading
+  if (itemInput) {
+    itemText.innerHTML = `${itemInput}`;
+    itemButton.innerHTML = " Done";
+  } else {
+    itemText.innerHTML = `unKnow`;
+    itemButton.innerHTML = " Done";
+  }
+
   itemText.innerHTML = `${itemInput}`;
   itemButton.innerHTML = " Done";
 
@@ -186,5 +203,6 @@ function addItem() {
 function back() {
   head1[0].style.display = "block";
   head2[0].style.display = "none";
+  // here headChaild is a taskParentDiv
   todo[0].appendChild(headChild);
 }
