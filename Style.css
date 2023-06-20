@@ -10,6 +10,9 @@
 .list{
     color: red;
 }
+.blur1{
+    filter: blur(20px);
+}
 span{
     font-size: 40px;
 }
@@ -249,4 +252,64 @@ input{
     width: 80px;
     height: 30px;
    margin-left: 20px;
+}
+
+
+ /* responsive */
+@media (max-width:600px) and (min-width:280px) {
+ .mainContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+ }
+ .head2{
+    width: 150%;
+    /* position: relative;
+    left: 40%;
+    top: auto; */
+ }
+.addTask,.addItem{
+    position: absolute;
+    left: 55%;
+    top: 50%;
+}
+
+ body{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+ }
+
+header{
+    padding: 10px;   
+    width: 98%; 
+}
+.todos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    left: 280px;
+    top:60px;
+    margin-bottom: 30px;
+}
+.todo2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    left: 280px;
+    top:60px;
+    margin-bottom: 30px;
+}
+.h2InnerContainner{
+ width: 99%;
+ padding-left: 10%;
+ padding-right: 10%;
+ display: flex;
+ box-sizing: content-box;
+ justify-content: space-between;
+}
 }

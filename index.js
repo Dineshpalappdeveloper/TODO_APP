@@ -41,7 +41,7 @@ closeTaskButton.addEventListener("click", () => {
 addItemButton.addEventListener("click", () => {
   addItem();
 });
-addTaskButton.addEventListener("click", () => {
+closeItemButton.addEventListener("click", () => {
   closeItem();
 });
 
@@ -166,7 +166,7 @@ function addItem() {
 
   let itemInput = document.querySelector(".cardItem").value;
   itemText.innerHTML = `${itemInput}`;
-  itemButton.innerHTML = "Done";
+  itemButton.innerHTML = " Done";
 
   itemButton.addEventListener("click", () => {
     itemText.style.textDecoration = "line-through";
