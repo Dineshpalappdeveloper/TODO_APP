@@ -47,8 +47,6 @@ closeItemButton.addEventListener("click", () => {
 
 // function start
 function addPopup() {
-  // head1[0].style.filter = "blur(20px)";
-  // head2[0].style.filter = "blur(20px)";
   head1[0].classList.add("blur1");
   head2[0].classList.add("blur1");
 
@@ -187,7 +185,7 @@ function addItem() {
 
   itemButton.addEventListener("click", () => {
     itemText.style.textDecoration = "line-through";
-    itemText.style.color = "orange";
+    itemText.style.color = "red";
     itemButton.style.display = "none";
     itemText.style.marginLeft = "55px";
 
