@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="mainContainer">
-      <header class="head1">
+      <header class="headingFirstPage">
         <div class="display">
           <h1>Task <span class="list">List</span></h1>
           <div class="display addBtn addSubtaskCon">
@@ -27,11 +27,11 @@
             <h2 class="addTaskPopUp2"><span> Add Item</span></h2>
           </div>
         </div>
-        <div class="checkItem">No Items in the todo List</div>
-        <div class="todos" id="todos"></div>
+        <div class="checkItem">No Items in the toDo List</div>
+        <div class="toDoCardContainers" id="toDoCardContainers"></div>
       </header>
 
-      <header class="head2">
+      <header class="headingSecondPage">
         <div class="display h2InnerContainner">
           <div class="display backContainner1">
             <button class="backBtn">
@@ -41,10 +41,10 @@
               <span class="backText">BACK</span>
             </h2>
           </div>
-          <div class="head2Text"></div>
+          <div class="headingSecondPageText"></div>
           <button class="btn1 addTaskPopUpSecondPage">+</button>
         </div>
-        <div class="todo2"></div>
+        <div class="toDoCardContainer2"></div>
       </header>
 
       <section>
@@ -65,8 +65,10 @@
           <div class="adt">ADD NEW ITEM</div>
           <input class="cardItem" type="text" placeholder="Add New Item" />
           <div>
-            <button id="addBtn2" class="btn2 addBtn2 addItemButton">Add</button>
-            <button class="btn2 closeBtn2 closeItemButton">Close</button>
+            <button id="addBtn2" class="btn2 addBtn2 addSubtaskConButton">
+              Add
+            </button>
+            <button class="btn2 closeBtn2 closeSubtaskConButton">Close</button>
           </div>
         </div>
       </section>

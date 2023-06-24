@@ -39,11 +39,11 @@ h1{
 header{
     padding: 40px;    
 }
-.head2Text{
+.headingSecondPageText{
     font-size: 40px;
 
 }
-.head2{
+.headingSecondPage{
     display: none;
     margin-bottom: 100px;
 }
@@ -149,7 +149,7 @@ input{
 .blur{
     filter: blur(20px);
 }
-.todos{
+.toDoCardContainers{
     width: 1000px;
     position: relative;
     display: flex;
@@ -159,13 +159,13 @@ input{
     top:60px;
     background-color: rgb(53, 54, 51);
 }
-.todo2{
+.toDoCardContainer2{
     width: 400px;
     position: relative;
     left: 640px;
     top:150px;
 }
-.todoscard{
+.toDoCardContainerscard{
     width: 220px;
     height: 350px;
     background-color: #FFF4F4;
@@ -258,7 +258,7 @@ input{
 .checkItem{
     font-size: 40px;
     }
-    .head2Text{
+    .headingSecondPageText{
         font-size: 40px;
         display: flex;
         align-items: center;
@@ -267,7 +267,10 @@ input{
     .backText{
         font-size: 30px;
     }
-
+.SubtaskConButton{
+    background-color: aqua;
+    border: 1px solid red;
+}
  /* responsive */
 
  
@@ -344,7 +347,7 @@ header{
     width: 99%; 
      
 }
-.todos{
+.toDoCardContainers{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -363,10 +366,10 @@ header{
  box-sizing: content-box;
  justify-content: space-between;
 }
-.head1{
+.headingFirstPage{
     padding-right: 30px;
 }
-.todoscard{
+.toDoCardContainerscard{
     height: 1200px;
     width: 95%;
     margin-left: -210px;
@@ -398,7 +401,7 @@ left: 260px;
     font-size: 50px;
     margin-left: -100px;
 }
-.head1{
+.headingFirstPage{
 margin-left: -10px;
 }
 .checkItem{
@@ -459,18 +462,30 @@ margin-left: -10px;
     margin-top: 4px;
     text-align: center;
 }
+.SubtaskConButton{
+    color: black;
+    font-size: 94px;
+    font-weight: bold;
+    /* width: 70px; */
+    margin-right: 2px;
+    margin-top: 4px;
+    height: 170px;
+    width: 210px;
+
+    text-align: center; 
+}
 .itemButton{
     height: 170px;
     width: 210px;
 }
-.head2{
+.headingSecondPage{
     width: 240%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   
  }
  .h2InnerContainner{
     width: 97%;
-    border: 2px solid red; 
+    /* border: 2px solid red;  */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -493,7 +508,7 @@ margin-left: -10px;
  .backBtn{
     display: none;
  }
- .head2Text{
+ .headingSecondPageText{
 background-color: #11009E;
 font-size: 150px;
 color: red;
@@ -506,7 +521,7 @@ color: red;
     text-align: center;
  
  }
- .todo2{
+ .toDoCardContainer2{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
