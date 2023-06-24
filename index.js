@@ -114,6 +114,7 @@ function createCard(id, cardTittle, count) {
   heading.addEventListener("click", () => {
     head1[0].style.display = "none";
     head2[0].style.display = "block";
+    mainDiv.classList.add("mainDivBack");
     head2Text[0].innerHTML = `${cardTittle}`;
     todoCardId = todoDiv.getAttribute("id");
     headChild = document.getElementById(`${todoCardId}`);
@@ -203,4 +204,5 @@ function back() {
   head2[0].style.display = "none";
   // here headChaild is a taskParentDiv
   todo[0].appendChild(headChild);
+  mainDiv.classList.remove("mainDivBack");
 }
