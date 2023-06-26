@@ -9,6 +9,7 @@ let closeTaskButton = document.querySelector(".closeTaskButton");
 let headingFirstPage = document.getElementsByClassName("headingFirstPage");
 let popup = document.getElementsByClassName("addTask");
 let popup2 = document.getElementsByClassName("addItem");
+let checkItems = document.querySelector(".checkItem");
 let addSubtaskConButton = document.querySelector(".addSubtaskConButton");
 let headingSecondPage = document.getElementsByClassName("headingSecondPage");
 let headingSecondPageText = document.getElementsByClassName(
@@ -73,22 +74,21 @@ function addTask() {
   count++;
 
   let cardTittle = document.querySelector(".cardText").value;
-  if (count > 0) {
-    let checkItems = document.querySelector(".checkItem");
-    checkItems.style.display = "none";
-  }
 
   if (cardTittle) {
-    createCard(idCount, cardTittle, count);
+    createCard(idCount, cardTittle);
   } else {
     cardTittle = "No Name";
-    createCard(idCount, cardTittle, count);
+    createCard(idCount, cardTittle);
   }
   closeTask();
-  back();
+  // back();
+  if (count>0) {
+    checkItems.style.display = "none";
+  }
 }
 
-function createCard(id, cardTittle, count) {
+function createCard(id, cardTittle) {
   let toDoCardContainerDiv = document.createElement("div");
   toDoCardContainerDiv.setAttribute("id", `${id}`);
   let heading = document.createElement("p");
@@ -123,15 +123,19 @@ function createCard(id, cardTittle, count) {
     console.log(headChild);
     toDoCardContainer2[0].appendChild(headChild);
     // here headChaild is a taskParentDiv
+    button1.addEventListener('click',()=>{
+      mainDiv.classList.remove("mainDivBack");
+      headingFirstPage[0].style.display = "block";
+      headingSecondPage[0].style.display = "none";
+      headChild.remove();
+      RemoveNoItem()
+    })
   });
 
   button1.addEventListener("click", () => {
-    count--;
     toDoCardContainerDiv.remove();
-    if (count === 0) {
-      let checkItems = document.querySelector(".checkItem");
-      checkItems.style.display = "block";
-    }
+    count--;
+    RemoveNoItem()
   });
 
   button2.addEventListener("click", () => {
@@ -199,6 +203,7 @@ function addItem() {
       itemText.style.marginLeft = "0px";
     });
   });
+
 }
 
 function back() {
@@ -207,4 +212,10 @@ function back() {
   // here headChaild is a taskParentDiv
   toDoCardContainer[0].appendChild(headChild);
   mainDiv.classList.remove("mainDivBack");
+}
+
+function RemoveNoItem(){
+  if (count === 0) {
+    checkItems.style.display = "block";
+  }
 }
