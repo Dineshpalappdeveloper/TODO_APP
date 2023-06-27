@@ -83,7 +83,7 @@ function addTask() {
   }
   closeTask();
   // back();
-  if (count>0) {
+  if (count > 0) {
     checkItems.style.display = "none";
   }
 }
@@ -99,9 +99,11 @@ function createCard(id, cardTittle) {
   mainDiv.setAttribute("id", `mainDiv${id}`);
   toDoCardContainer[0].appendChild(toDoCardContainerDiv);
   toDoCardContainerDiv.appendChild(heading);
+  toDoCardContainerDiv.appendChild(mainDiv);
   toDoCardContainerDiv.append(button1);
   toDoCardContainerDiv.append(button2);
-  toDoCardContainerDiv.appendChild(mainDiv);
+
+  // toDoCardContainerDiv.appendChild(mainDiv);
 
   heading.innerHTML = `${cardTittle}`;
 
@@ -123,19 +125,19 @@ function createCard(id, cardTittle) {
     console.log(headChild);
     toDoCardContainer2[0].appendChild(headChild);
     // here headChaild is a taskParentDiv
-    button1.addEventListener('click',()=>{
+    button1.addEventListener("click", () => {
       mainDiv.classList.remove("mainDivBack");
       headingFirstPage[0].style.display = "block";
       headingSecondPage[0].style.display = "none";
       headChild.remove();
-      RemoveNoItem()
-    })
+      RemoveNoItem();
+    });
   });
 
   button1.addEventListener("click", () => {
     toDoCardContainerDiv.remove();
     count--;
-    RemoveNoItem()
+    RemoveNoItem();
   });
 
   button2.addEventListener("click", () => {
@@ -148,7 +150,7 @@ function createCard(id, cardTittle) {
     toDoCardContainerCardId = toDoCardContainerDiv.getAttribute("id");
     // this line is use to targeting the subtaskContainner
     child = document.getElementById(`${toDoCardContainerCardId}`).children;
-    childMainDiv = child[3];
+    childMainDiv = child[1];
     // here childMainDiv is subtaskContainner
   });
 }
@@ -203,7 +205,6 @@ function addItem() {
       itemText.style.marginLeft = "0px";
     });
   });
-
 }
 
 function back() {
@@ -214,7 +215,7 @@ function back() {
   mainDiv.classList.remove("mainDivBack");
 }
 
-function RemoveNoItem(){
+function RemoveNoItem() {
   if (count === 0) {
     checkItems.style.display = "block";
   }
