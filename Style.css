@@ -25,6 +25,8 @@ span{
 body{
     background-color: rgb(53, 54, 51);
     overflow-x: hidden;
+    height: 100%;
+    width: 100%;
 }
 .mainContainer{
     background-color: rgb(53, 54, 51);
