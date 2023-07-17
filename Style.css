@@ -6,7 +6,7 @@
 }
 .checkItem{
     font-size: 52px;
-    color: #EA906C;
+
 }
 .list{
     color: red;
@@ -26,6 +26,7 @@ span{
 body{
     background-color: rgb(53, 54, 51);
     overflow-x: hidden;
+    overflow-y: hidden;
     height: 100%;
     width: 100%;
 
@@ -37,7 +38,10 @@ body{
     
 
 }
-
+.mainContainer{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 h1{
     font-size: 50px;
     
@@ -161,7 +165,7 @@ input{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    left: 280px;
+    left: 210px;
     top:60px;
     background-color: rgb(53, 54, 51);
 }
