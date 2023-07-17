@@ -16,6 +16,7 @@
 }
 span{
     font-size: 40px;
+    color: #068DA9;
 }
 .imgBack{
     height: 30px;
@@ -27,6 +28,7 @@ body{
     overflow-x: hidden;
     height: 100%;
     width: 100%;
+
 }
 .mainContainer{
     background-color: rgb(53, 54, 51);
