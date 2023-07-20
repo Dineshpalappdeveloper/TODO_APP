@@ -26,7 +26,7 @@ span{
 body{
     background-color: rgb(53, 54, 51);
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     height: 100%;
     width: 100%;
 
@@ -59,6 +59,7 @@ header{
 }
 .display{
     display: flex;
+    /* width: 90%; */
     justify-content: space-around;
 }
 .addBtn{
@@ -115,7 +116,7 @@ input{
 .addTask{
     display: none;
     flex-direction: column;
-    width: 400px;
+    width: 380px;
     height: 200px;
     background-color: white;
     border-radius: 10px;
@@ -131,7 +132,7 @@ input{
 .addItem{
     display: none;
     flex-direction: column;
-    width: 400px;
+    width: 380px;
     height: 200px;
     background-color: white;
     border-radius: 10px;
@@ -293,6 +294,10 @@ input{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-left: -35px;
+    overflow-x: hidden;
+    /* border: 5px solid whitesmoke;
+    background-color: red; */
    
  }
 
@@ -377,12 +382,14 @@ header{
  justify-content: space-between;
 }
 .headingFirstPage{
-    padding-right: 30px;
+    padding-right: 10px;
+    margin-left: -10px;
+
 }
 .toDoCardContainerscard{
     height: 1200px;
-    width: 95%;
-    margin-left: -210px;
+    width: 88%;
+    margin-left: -200px;
 }
 
 .addCardBtn2{
