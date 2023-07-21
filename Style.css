@@ -1,76 +1,44 @@
 *{
-    font-family: 'Cookie', cursive;
-    /* font-style: italic; */
-    /* font-size: 32px; */
-    font-size: x-large;
+    font-style: italic;
 }
-.checkItem{
-    font-size: 52px;
 
-}
-.list{
-    color: red;
-}
-.blur1{
-    filter: blur(20px);
-}
-span{
-    font-size: 40px;
-    color: #068DA9;
-}
-.imgBack{
-    height: 30px;
-    width: 30px;
-    margin-top: -1px;
-}
 body{
-    background-color: rgb(53, 54, 51);
-    overflow-x: hidden;
-    /* overflow-y: hidden; */
-    height: 100%;
-    width: 100%;
-
+    background-color: black;
 }
 .mainContainer{
-    background-color: rgb(53, 54, 51);
+    background-color: black;
     color: white;
     box-sizing: border-box;
     
 
 }
-.mainContainer{
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
+
 h1{
     font-size: 50px;
     
 }
 header{
-    padding: 40px;    
+    padding: 20px;    
 }
-.headingSecondPageText{
+.head2Text{
     font-size: 40px;
+    display: none;
+    position: relative;
+    left: 35px;
 
 }
-.headingSecondPage{
-    display: none;
-    margin-bottom: 100px;
-}
+
 .display{
     display: flex;
-    /* width: 90%; */
     justify-content: space-around;
 }
-.addBtn{
-    padding: 25px;
-}
+
 .btn1{
     width: 40px;
     height: 40px;
     border: 2px solid #11009E;
-    background-color: #209e00;
-    border-radius: 15px;
+    background-color: green;
+    border-radius: 50%;
     font-size: 35px;
     margin-top: 15px;
     margin-right: 15px;
@@ -88,18 +56,21 @@ header{
 }
 
 .checkItem{
+    width: 290px;
     font-size: 25px;
     font-weight: bolder;
     position: relative;
     left: 320px;
     margin-top: 40px;
 }
-
 .adt{
     color: orangered;
     font-size: x-large;
     padding-bottom: 10px;
     font-weight: bolder;
+}
+.back{
+    display: none;
 }
 input{
     width: 300px;
@@ -107,8 +78,6 @@ input{
     margin-left: 30px;
     margin-bottom: 10px;
     padding: 10px;
-    color: aqua;
-    font-size: 24px;
     border: 1px solid orangered;
     border-radius:4px ;
     box-shadow: 1px 1px 4px 2px gray;
@@ -116,7 +85,7 @@ input{
 .addTask{
     display: none;
     flex-direction: column;
-    width: 380px;
+    width: 400px;
     height: 200px;
     background-color: white;
     border-radius: 10px;
@@ -132,7 +101,7 @@ input{
 .addItem{
     display: none;
     flex-direction: column;
-    width: 380px;
+    width: 400px;
     height: 200px;
     background-color: white;
     border-radius: 10px;
@@ -160,23 +129,18 @@ input{
 .blur{
     filter: blur(20px);
 }
-.toDoCardContainers{
-    width: 1000px;
+.todos{
+    width: 950px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    left: 210px;
+    left: 280px;
     top:60px;
-    background-color: rgb(53, 54, 51);
+   background-color: black;
 }
-.toDoCardContainer2{
-    width: 400px;
-    position: relative;
-    left: 640px;
-    top:150px;
-}
-.toDoCardContainerscard{
+
+.todoscard{
     width: 220px;
     height: 350px;
     background-color: #FFF4F4;
@@ -193,8 +157,8 @@ input{
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    border: 1px solid #EA906C;
-    background-color: aqua;
+    border: 1px solid #000000;
+    /* background-color: #EA906C; */
     color: white;
     font-size: 28px;
     font-weight: bolder;
@@ -209,14 +173,14 @@ input{
     margin: 20px 0px;
     font-size: 25px;
     font-weight: bold;
+    overflow-wrap:break-word ;
 }
-
 .addCardBtn2{
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    border: 1px solid #068DA9;
-    background-color: #068DA9;
+    border: 1px solid #000000;
+    /* background-color: #068DA9; */
     color: white;
     font-size: 28px;
     font-weight: bolder;
@@ -230,349 +194,140 @@ input{
 .mainDiv{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 90px;
+    position: relative;
+    top: -30px;
     height: 200px;
     overflow-y: auto ;
     overflow-x: hidden;
     
     
 }
+.mainDiv::-webkit-scrollbar{
+    
+    margin-top: 20px;
+}
 .itemDiv{
     display: flex;
-    
+    width: 200px;
     flex-wrap: wrap;
-    justify-content: space-between;
-   margin-left: 20px;
+    justify-content: space-evenly;
+   
    margin-bottom: 10px;
     
 }
 .itemText{
     color: black;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
-    width: 70px;
+    width: 80px;
     margin-right: 2px;
     margin-top: 4px;
     text-align: left;
+    overflow-wrap:break-word ;
 
 }
 .itemButton{
-    background-color:aqua;
+    background-color: aqua;
     border: 2px solid white;
-    color: #FFF4F4;
-    border-radius: 20px;
+    color: #000000;
+    border-radius: 2px;
     width: 80px;
     height: 30px;
-   margin-left: 20px;
+   margin-left: 10px;
 }
-.checkItem{
-    font-size: 40px;
+
+.para{
+    width: 70px;
+    color: white;
+    display: inline-block;
+}
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+@media only screen and (max-width: 500px) and (min-Width : 350px){
+   .mainContainer{
+    text-align: center;
+   
+   }
+    .todos{
+        display: block;
+        width: 85%;
+        left: 55px;
+        margin-top: 20px;
+        
     }
-    .headingSecondPageText{
-        font-size: 40px;
-        display: flex;
-        align-items: center;
-        text-align: center; 
+    h1{
+        margin: 20px 0;
+    }
+
+    .addBtn{
+       
+        width: 60px;
+        position: relative;
+        left: 25px;
+        top: 20px;
+    }
+    .checkItem{
+        font-size: 20px;
+        font-weight: bolder;
+        position: relative;
+        margin-top: 20px;
+        left: 50px;
+        width: 220px;
+    }
+    .addTask{
+        position: absolute;
+        width: 90%;
+        left:20px;
+        top: 300px;
+    }
+    .cardText{
+        margin-left: 0px;
+        width: 280px;
+    }
+    .addItem{
+        position: absolute;
+        width: 90%;
+        left:20px;
+        top: 300px;
+    }
+    .cardItem{
+        margin-left: 0px;
+        width: 280px;
+
     }
     .backText{
-        font-size: 30px;
+        display: none;
     }
-.SubtaskConButton{
-    background-color: aqua;
-    border: 1px solid red;
-}
- /* responsive */
-
- 
-@media (max-width:600px) and (min-width:280px) {
-
-    *{
-        /* font-size: 120px; */
+    .head1display{
+        display: flex;
     }
- .mainContainer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: -35px;
-    overflow-x: hidden;
-    /* border: 5px solid whitesmoke;
-    background-color: red; */
-   
- }
-
-.addTask,.addItem{
-    position: absolute;
-    left: 17%;
-    top: 50%;
-    height: 620px;
-    width: 1000px;
-    /* height */
-}
-
-.adt{
-    color: red;
-    font-size: 100px;
-    padding-bottom: 20px;
-    font-weight: bolder;
-}
-input{
-    width: 900px;
-
-    margin-left: 20px;
-    margin-bottom: 55px;
-    padding: 10px;
-    color: aqua;
-    font-size: 104px;
-    border: 1px solid red;
-    border-radius:4px ;
-   
-}
-.btn2{
-    height: 150px;
-    width: 300px;
-    margin-right: 30px;
-    font-size: 94px;
-}
-h1{
-    font-size: 90px;
-}
-h2{
-    font-size: 90px;
-}
-span{
-    font-size: 90px; 
-}
- body{
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
- }
-.addSubtaskCon{
-    margin-right: -150px;
-    margin-top: -30px;
-    display: flex;
-    /* background-color: #068DA9; */
-    align-items: center;
-    justify-content: center;
-}
-header{
-    padding: 10px;   
-    width: 99%; 
-     
-}
-.toDoCardContainers{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    left: 280px;
-    top:60px;
-    margin-bottom: 30px;
-  
-}
-
-.h2InnerContainner{
- width: 199%;
- padding-left: 10%;
- padding-right: 10%;
- display: flex;
- box-sizing: content-box;
- justify-content: space-between;
-}
-.headingFirstPage{
-    padding-right: 10px;
-    margin-left: -10px;
-
-}
-.toDoCardContainerscard{
-    height: 1200px;
-    width: 88%;
-    margin-left: -200px;
-}
-
-.addCardBtn2{
-    height: 185px;
-    width: 185px;
-    border-radius: 50%;
-    position: relative;
-    top: 800px;
-  padding: 5px;
-left: 260px;
-    z-index: 1;
-    
-}
-.addCardBtn1{
-    height: 185px;
-    width: 185px;
-    border-radius: 50%;
-    position: relative;
-    top: 800px;
-  padding: 5px;
-  left: 210px;
-    z-index: 1;
-    
-}
-.checkItem{
-    font-size: 50px;
-    margin-left: -100px;
-}
-.headingFirstPage{
-margin-left: -10px;
-}
-.checkItem{
-    font-size: 70px;
+    .head2{
+        display: flex;
+        width: 310px;
+        padding: 20px 20px 0px;
     }
- 
- .btn1{
-    width: 90px;
-    height: 90px;
-    border: 2px solid #11009E;
-    background-color: #209e00;
-    border-radius: 15px;
-    font-size: 90px;
-    margin-top: 15px;
-    margin-right: 15px;
-    padding-bottom: 10px;
-    padding-bottom: 10px;
-}
-.line{
-    border-bottom: 2px solid grey;
-    padding-bottom: 60px;
-    margin: 20px 80px 0px 0px;
-    font-size: 100px;
-    font-weight: bold;
-
-}
-
-.mainDiv{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 250px;
-    /* left: 1px; */
-    right: 380px;
-    /* justify-content: space-around; */
-    /* background-color: #068DA9; */
-    height: 750px;
-    width: 700px;
-    overflow-y: auto ;
-    overflow-x: hidden;
-    font-size: 70px;
-    padding: 20px;
-}
-.itemDiv{
-    display: flex;
-    font-size: 60px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   padding: 1px;
     
-}
-.itemText,.itemButton{
-    color: black;
-    font-size: 94px;
-    font-weight: bold;
-    /* width: 70px; */
-    margin-right: 2px;
-    margin-top: 4px;
-    text-align: center;
-}
-.SubtaskConButton{
-    color: black;
-    font-size: 94px;
-    font-weight: bold;
-    /* width: 70px; */
-    margin-right: 2px;
-    margin-top: 4px;
-    height: 170px;
-    width: 210px;
-
-    text-align: center; 
-}
-.itemButton{
-    height: 170px;
-    width: 210px;
-}
-.headingSecondPage{
-    width: 240%;
-    /* border: 2px solid red; */
-  
- }
- .h2InnerContainner{
-    width: 97%;
-    /* border: 2px solid red;  */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
- }
- .backContainner1{
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
- }
- .backText{
-    font-size: 100px;
- }
- .imgBack{
-    height: 100px;
-    width: 100px;
-    display: none;
- }
- .backBtn{
-    display: none;
- }
- .headingSecondPageText{
-background-color: #11009E;
-font-size: 150px;
-color: red;
- }
- .addTaskPopUpSecondPage{
-    padding-bottom: 36px;
-    height: 100px;
-    width: 100px;
-    font-size: 120px;
-    text-align: center;
- 
- }
- .toDoCardContainer2{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    /* left: 280px; */
-    left: 30%;
-    top:60px;
-    width: 95%;
-   
-    height: 1800px;
-    margin-bottom: 30px;
-}
-
-.mainDiv{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 250px;
-    /* left: 1px; */
-    right: 380px;
-    /* justify-content: space-around; */
-    /* background-color: #068DA9; */
-    height: 750px;
-    width: 700px;
-    overflow-y: auto ;
-    overflow-x: hidden;
-    font-size: 70px;
-    padding: 20px;
-}
-.mainDivBack{
-    top: 450px;
-
-    right: 380px;
-}
-
+        
+    
+    .btn1{
+        width: 40px;
+        height: 40px;
+        margin-right: 30px;
+        
+    }
+    .back{
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        
+    }
+    .head2Text{
+        position: relative;
+        left: 10px;
+        top: 30px;
+    }
 
 }
