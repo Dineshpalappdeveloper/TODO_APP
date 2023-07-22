@@ -74,9 +74,9 @@ function createCard( id ,cardTittle , count){
 
         head2Text.innerHTML = `${cardTittle}`
         todoCardId = todoDiv.getAttribute("id");
-        // // console.log(todoCardId)
+       
         headChild = document.getElementById(`${todoCardId}`)
-        // // console.log(headChild)
+   
 
         cards = document.querySelectorAll(".todoscard")
         console.log(cards)
@@ -90,7 +90,7 @@ function createCard( id ,cardTittle , count){
     button1.addEventListener("click",()=>{
         todoDiv.remove()
         count--;
-        // console.log(todoDiv)
+      
         if(count === 0){
             let checkItems = document.querySelector(".checkItem");
             checkItems.style.display = "block" 
