@@ -247,6 +247,9 @@ input{
     justify-content: space-evenly;
 }
 @media only screen and (max-width: 500px) and (min-Width : 350px){
+    body{
+        padding: 10px;
+    }
    .mainContainer{
     text-align: center;
    
